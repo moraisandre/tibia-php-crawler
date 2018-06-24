@@ -28,6 +28,8 @@
 
 	function getData($link, $query, $type) 
 	{
+		libxml_use_internal_errors(true);
+
 		$html = file_get_contents($link);
 
 		$document = new DOMDocument();
